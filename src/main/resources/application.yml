@@ -1,23 +1,22 @@
 server:
-  port: 9000
-#Ö¸¶¨×¢²áÖĞĞÄµØÖ·
+    port: 9000
+  #æŒ‡å®šæ³¨å†Œä¸­å¿ƒåœ°å€
 eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:8660/eureka/
-#·şÎñµÄÃû³Æ
+  #æœåŠ¡çš„åç§°
 spring:
   application:
     name: api-gateway
 zuul:
   routes:
-  #·şÎñÃûÂ·ÓÉ³ÆÓ³Éä
+  #æœåŠ¡åè·¯ç”±ç§°æ˜ å°„
     order-service: /apigateway/order/**
     product-service: /apigateway/product/**
-    #Ìí¼Óignored-patternsÖ»ÄÜÍ¨¹ı/apigateway/** È¥·ÃÎÊ
+  #æ·»åŠ ignored-patternsåªèƒ½é€šè¿‡/apigateway/** å»è®¿é—®
   ignored-patterns: /*-service/**
-  #´¦ÀíhttpÇëÇóÍ·Îª¿ÕµÄÎÊÌâ
+  #å¤„ç†httpè¯·æ±‚å¤´ä¸ºç©ºçš„é—®é¢˜
   sensitiveHeaders:
-  #ºöÂÔÕû¸ö·şÎñ£¬¶ÔÍâÌá¹©½Ó¿Ú
+  #å¿½ç•¥æ•´ä¸ªæœåŠ¡ï¼Œå¯¹å¤–æä¾›æ¥å£
   #ignored-services: product-service
-
