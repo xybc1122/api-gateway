@@ -2,7 +2,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:8660/eureka/
+      defaultZone: http://192.168.3.222:8660/eureka/
   #服务的名称
 spring:
   application:
